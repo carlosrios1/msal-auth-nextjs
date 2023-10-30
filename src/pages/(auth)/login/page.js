@@ -10,6 +10,8 @@ import { useEffect, useState } from "react";
 import "../../../app/css/style.css";
 import "tailwindcss/tailwind.css";
 import Link from "next/link";
+import Image from "next/image";
+import logo from '../../../assets/logo_pia_blanco.png'
 
 export default function Login() {
   const { instance, accounts } = useMsal();
@@ -50,11 +52,21 @@ export default function Login() {
         </div>
 
         <div className="absolute inset-1 bg-gray-800 rounded-lg z-10 p-5">
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h1 className="py-20 text-2xl font-mono">
+          <div className="flex flex-col justify-center items-center">
+            <Image src={logo}
+              width={150}
+              height={150}
+              alt="logo"
+              className="py-4 ">
 
-              ¡Bienvenido, es un gusto tenerte de vuelta!
-            </h1>
+            </Image>
+            <div className="flex justify-center px-6 py-4 text-xl font-mono text-white">
+              <h1>
+
+                ¡Bienvenido, es un gusto tenerte de vuelta!
+              </h1>
+            </div>
+
             <AuthenticatedTemplate>
               {/* <h6>You're logged in!</h6>
               {accountDetails && <center>Name: {accountDetails.name}</center>}
@@ -64,7 +76,7 @@ export default function Login() {
             <UnauthenticatedTemplate>
               <div className="max-w-sm mx-auto">
                 <div className="flex flex-wrap -mx-3">
-                  <div className="flex justify-center items-center  w-full ">
+                  <div className="flex justify-center items-center w-full py-4 ">
                     <button
                       onClick={() => handleLogin()}
                       className="btn flex items-center px-7 text-white bg-sky-700 hover:bg-sky-900 w-full relative"

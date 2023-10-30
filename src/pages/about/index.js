@@ -60,7 +60,7 @@ export default function About() {
   }
 
   return (
-    <div className="bg-gray-900 font-mono">
+    <div className="bg-gray-900 text-white font-mono">
       <h1 >About Page</h1>
       <AuthenticatedTemplate>
         <h6>You're logged in!</h6>
