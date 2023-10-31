@@ -1,5 +1,6 @@
 import React from 'react'
 import Login from './(auth)/login/page'
+import Header from '../components/header'
 
 function Home() {
   return (

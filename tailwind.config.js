@@ -12,6 +12,10 @@ const config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
 
+      colors: {
+        'custom-blue': '#0369a1',
+      },
+
       animation: {
         'spin-slow': 'spin 6s linear infinite',
         'spin-delay': 'spin 6s linear infinite -3s'

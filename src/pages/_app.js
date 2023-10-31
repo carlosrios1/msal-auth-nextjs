@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
         <MsalProvider instance={msalInstance}>
             <Component {...pageProps} />
         </MsalProvider>
+      
     )
 }
 
